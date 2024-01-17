@@ -1,3 +1,5 @@
+# A simple discord bot to check if a number is a prime.
+
 import discord
 import os
 
