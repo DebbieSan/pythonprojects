@@ -2,6 +2,7 @@
 
 import discord
 import os
+import sys
 
 def isPrime(number : int) -> bool:
     if (number <= 1):
@@ -54,6 +55,9 @@ async def on_message(message):
 
 
 token = os.getenv('token1')
+if not token:
+    print(f"token value is {token}. Did you forget to 'source /path/to/you/.env' or 'vrun'?")
+    sys.exit(1)
 client.run(token)
 
 
